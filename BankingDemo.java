@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 class BankingDemo {
 	// Demonstration objects.
 	private static BigDecimal obj;
-	private static ChequingAccount ca;
+	private static CheckingAccount ca;
 	private static SavingsAccount sa;
 	
 	// Filler banking info.
@@ -17,11 +17,11 @@ class BankingDemo {
 	private static int withdrawLimit;
 	private static int transactionLimit;
 	
-	private static void runChequingAccountDemo() {
+	private static void runCheckingAccountDemo() {
 		obj = new BigDecimal("100");
-		ca = new ChequingAccount(id, name, fee, withdrawLimit, transactionLimit);
+		ca = new CheckingAccount(id, name, fee, withdrawLimit, transactionLimit);
 		
-		// Deposit $100.00 into ChequingAccount.
+		// Deposit $100.00 into CheckingAccount.
 		ca.deposit(obj);
 		ca.displayInfo();
 		
@@ -80,14 +80,14 @@ class BankingDemo {
 	}
 	
 	public static void main(String args[]) {
-		// ChequingAccount demonstration.
+		// CheckingAccount demonstration.
 		id = "1";
 		name = "John";
 		fee = 1.25;
 		withdrawLimit = 500;
 		transactionLimit = 12;
 		
-		runChequingAccountDemo();
+		runCheckingAccountDemo();
 		
 		System.out.println();
 		
